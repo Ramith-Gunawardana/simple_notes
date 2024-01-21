@@ -50,6 +50,7 @@ class _ViewNoteState extends State<ViewNote> {
                     builder: (context) => const NotesPage(),
                   ),
                 );
+                Navigator.pop(context);
               });
 
               //clear textediting controller
