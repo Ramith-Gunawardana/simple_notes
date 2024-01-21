@@ -3,9 +3,13 @@ import 'dart:math';
 
 class TextField_Custom extends StatelessWidget {
   const TextField_Custom(
-      {required this.textController, required this.focusNode, super.key});
+      {required this.textController,
+      required this.focusNode,
+      required this.undoController,
+      super.key});
   final TextEditingController textController;
   final FocusNode focusNode;
+  final UndoHistoryController undoController;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +29,21 @@ class TextField_Custom extends StatelessWidget {
     return TextField(
       controller: textController,
       focusNode: focusNode,
+      expands: true,
+      minLines: null,
+      maxLines: null,
       decoration: InputDecoration(
         hintText: hintTexts[randomIndex],
         filled: true,
-        border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(18),
-          ),
-        ),
+        border: InputBorder.none,
+        fillColor: Colors.transparent,
+        // border: const OutlineInputBorder(
+        //   borderRadius: BorderRadius.all(
+        //     Radius.circular(18),
+        //   ),
+        // ),
       ),
+      undoController: undoController,
     );
   }
 }
