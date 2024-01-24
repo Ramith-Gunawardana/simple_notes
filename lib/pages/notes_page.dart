@@ -195,11 +195,13 @@ class _NotesPageState extends State<NotesPage> {
           children: [
             ExpansionTile_Custom(
               question: 'How to create a new note?',
-              answer: 'Tap the + icon on the bottom right corner',
+              answer:
+                  'Tap the \'+\' icon on the bottom right corner. Add a note and come back to the home screen. The note will be automatically saved!',
             ),
             ExpansionTile_Custom(
               question: 'How to update a note?',
-              answer: 'Tap on the note and make the changes. Then hit save!',
+              answer:
+                  'Tap on the note and make the changes. Then come back to the home screen.',
             ),
             ExpansionTile_Custom(
               question: 'How to delete a note?',
@@ -208,7 +210,7 @@ class _NotesPageState extends State<NotesPage> {
             ExpansionTile_Custom(
               question: 'How to recover an accidently deleted note?',
               answer:
-                  'Tap \'Undo\' on the card which display when deleting the note. After 3 seconds it will dissapear and you cannot recover afterwards.',
+                  'Tap \'Undo\' on the card which displays when deleting the note. After 3 seconds it will disappear and you cannot recover afterwards.',
             ),
           ],
         ),
@@ -292,7 +294,12 @@ class _NotesPageState extends State<NotesPage> {
                     applicationName: 'Simple Notes',
                     applicationVersion: _packageInfo.version,
                     children: [
-                      const Text('Made with 💛 by Ramith Gunawardana'),
+                      const Text(
+                        'Made with 💛 by Ramith Gunawardana',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
                       const SizedBox(height: 12),
                       InkWell(
                           onTap: _launchUrl,
@@ -303,7 +310,13 @@ class _NotesPageState extends State<NotesPage> {
                               fontWeight: FontWeight.bold,
                             ),
                           )),
+                      const SizedBox(height: 12),
+                      const Text(
+                        'Animated icons by Lordicon.com',
+                        textScaler: TextScaler.linear(0.8),
+                      ),
                     ],
+
                     // ExactAssetImage('lib/assets/notes.png')
                     //   title: const Text('About Simple Notes'),
                     //   content: Column(
@@ -461,7 +474,7 @@ class _NotesPageState extends State<NotesPage> {
                           height: 12,
                         ),
                         const Text(
-                          'It seems like empty here...',
+                          'It seems empty here...',
                           textAlign: TextAlign.start,
                           textScaler: TextScaler.linear(1.2),
                         ),
