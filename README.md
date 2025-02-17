@@ -66,11 +66,13 @@ To build the app for Android and iOS, use the following commands:
 
 ## Screenshots
 
-<img src="screenshots/icon.png" height="200">
+<img src="assets/icon.png" height="200">
 <p>
-<img src="screenshots/phone1.png" width="200">
-<img src="screenshots/phone2.png" width="200">
-<img src="screenshots/phone3.png" width="200">
+<img src="assets/note.jpg" width="200">
+<img src="assets/home.jpg" width="200">
+<img src="assets/new note.jpg" width="200">
+<img src="assets/delete note.jpg" width="200">
+<img src="assets/light mode'.jpg" width="200">
 </p>
 
 ## Contributing
